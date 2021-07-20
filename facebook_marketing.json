@@ -22,9 +22,8 @@
               "null",
               "object"
             ],
-            "properties": {}
-          },
-          "metadata": {
+            "properties": {},
+            "metadata": {
             "behaviour": "default",
             "id_graph": [
               {
@@ -32,6 +31,7 @@
                 "map_column": "click_id"
               }
             ]
+          }
           },
           "supportedSyncModes": [
             "incremental"
@@ -56,16 +56,16 @@
               "null",
               "object"
             ],
-            "properties": {}
-          },
-          "metadata": {
-            "behaviour": "profile",
-            "id_graph": [
-              {
-                "map_provider": "fbclid",
-                "map_column": "click_id"
-              }
-            ]
+            "properties": {},
+            "metadata": {
+              "behaviour": "profile",
+              "id_graph": [
+                {
+                  "map_provider": "fbclid",
+                  "map_column": "click_id"
+                }
+              ]
+            }
           },
           "supportedSyncModes": [
             "incremental"
