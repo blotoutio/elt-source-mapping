@@ -17,7 +17,7 @@
         },
         "stream": {
           "name": "ads",
-          "json_schema": {
+          "jsonSchema": {
             "type": [
               "null",
               "object"
@@ -51,7 +51,7 @@
         },
         "stream": {
           "name": "ads_insights",
-          "json_schema": {
+          "jsonSchema": {
             "type": [
               "null",
               "object"
