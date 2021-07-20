@@ -2,36 +2,43 @@
   "syncCatalog": {
     "streams": [
       {
-        "config": {
-          "syncMode": "incremental",
-          "cursorField": [],
-          "destinationSyncMode": "append",
-          "primaryKey": [
-            "adID",
-            "campaignID"
-          ],
-          "aliasName": "AD_PERFORMANCE_REPORT",
-          "selected": true
-        },
         "stream": {
-          "name": "AD_PERFORMANCE_REPORT",
-          "json_schema": {
-            "type": "object",
-            "is_report": "true",
-            "properties": {}
-          },
-          "metadata": {
-            "behaviour": "others",
-            "id_graph": [
-              {
-                "map_provider": "gclid",
-                "map_column": "click_id"
-              }
-            ]
+          "name": "ad_group_ad_report",
+          "jsonSchema": {
+            "properties": {},
+            "metadata": {
+              "behaviour": "others",
+              "id_graph": [
+                {
+                  "map_provider": "gclid",
+                  "map_column": "click_id"
+                }
+              ]
+            }
           },
           "supportedSyncModes": [
+            "full_refresh",
             "incremental"
-          ]
+          ],
+          "sourceDefinedCursor": true,
+          "defaultCursorField": [
+            "segments.date"
+          ],
+          "sourceDefinedPrimaryKey": [],
+          "namespace": null
+        },
+        "config": {
+          "syncMode": "full_refresh",
+          "cursorField": [
+            "segments.date"
+          ],
+          "destinationSyncMode": "append",
+          "primaryKey": [
+            "campaign.id",
+            "ad_group_ad.ad.id"
+          ],
+          "aliasName": "ad_group_ad_report",
+          "selected": true
         }
       }
     ]
