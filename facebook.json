@@ -1,77 +1,83 @@
 {
-  "syncCatalog": {
-    "streams": [
-      {
-        "config": {
-          "syncMode": "incremental",
-          "cursorField": [
-            "updated_time"
-          ],
-          "destinationSyncMode": "append",
-          "primaryKey": [
-            "creative_id",
-            "campaign_id"
-          ],
-          "aliasName": "ads",
-          "selected": true
-        },
-        "stream": {
-          "name": "ads",
-          "jsonSchema": {
-            "type": [
-              "null",
-              "object"
+  "id": 2,
+  "source_name": "facebook",
+  "created_at": "2021-07-08 00:00:00",
+  "last_updated_at": "2021-09-13 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "config": {
+            "syncMode": "incremental",
+            "cursorField": [
+              "updated_time"
             ],
-            "properties": {},
-            "metadata": {
-            "behaviour": "default",
-            "id_graph": [
-              {
-                "map_provider": "fbclid",
-                "map_column": "click_id"
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              "creative_id",
+              "campaign_id"
+            ],
+            "aliasName": "ads",
+            "selected": true
+          },
+          "stream": {
+            "name": "ads",
+            "jsonSchema": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {},
+              "metadata": {
+                "behaviour": "default",
+                "id_graph": [
+                  {
+                    "map_provider": "fbclid",
+                    "map_column": "click_id"
+                  }
+                ]
               }
+            },
+            "supportedSyncModes": [
+              "incremental"
             ]
           }
-          },
-          "supportedSyncModes": [
-            "incremental"
-          ]
-        }
-      },
-      {
-        "config": {
-          "syncMode": "incremental",
-          "cursorField": [],
-          "destinationSyncMode": "append",
-          "primaryKey": [
-            "campaign_id"
-          ],
-          "aliasName": "ads_insights",
-          "selected": true
         },
-        "stream": {
-          "name": "ads_insights",
-          "jsonSchema": {
-            "type": [
-              "null",
-              "object"
+        {
+          "config": {
+            "syncMode": "incremental",
+            "cursorField": [],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              "campaign_id"
             ],
-            "properties": {},
-            "metadata": {
-              "behaviour": "profile",
-              "id_graph": [
-                {
-                  "map_provider": "fbclid",
-                  "map_column": "click_id"
-                }
-              ]
-            }
+            "aliasName": "ads_insights",
+            "selected": true
           },
-          "supportedSyncModes": [
-            "incremental"
-          ]
+          "stream": {
+            "name": "ads_insights",
+            "jsonSchema": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {},
+              "metadata": {
+                "behaviour": "profile",
+                "id_graph": [
+                  {
+                    "map_provider": "fbclid",
+                    "map_column": "click_id"
+                  }
+                ]
+              }
+            },
+            "supportedSyncModes": [
+              "incremental"
+            ]
+          }
         }
-      }
-    ]
+      ]
+    }
   }
 }
