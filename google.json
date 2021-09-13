@@ -1,82 +1,88 @@
 {
-  "syncCatalog": {
-    "streams": [
-      {
-        "stream": {
-          "name": "ad_group_ad_report",
-          "jsonSchema": {
-            "properties": {},
-            "metadata": {
-              "behaviour": "others",
-              "id_graph": [],
-              "event_map": []
-            }
-          },
-          "supportedSyncModes": [
-            "full_refresh",
-            "incremental"
-          ],
-          "sourceDefinedCursor": true,
-          "defaultCursorField": [
-            "segments.date"
-          ],
-          "sourceDefinedPrimaryKey": [],
-          "namespace": null
-        },
-        "config": {
-          "syncMode": "full_refresh",
-          "cursorField": [
-            "segments.date"
-          ],
-          "destinationSyncMode": "append",
-          "primaryKey": [
-            "campaign.id",
-            "ad_group_ad.ad.id"
-          ],
-          "aliasName": "ad_group_ad_report",
-          "selected": true
-        }
-      },
-      {
-        "stream": {
-          "name": "click_view",
-          "jsonSchema": {
-            "type": "object",
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "metadata": {
-              "behaviour": "Default",
-              "event_map": [],
-              "id_mapping": [
-                {
-                  "map_provider": "gclid",
-                  "map_column": "click_view.gclid"
-                }
-              ]
+  "id": 1,
+  "source_name": "google",
+  "created_at": "2021-07-08 00:00:00",
+  "last_updated_at": "2021-09-13 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "stream": {
+            "name": "ad_group_ad_report",
+            "jsonSchema": {
+              "properties": {},
+              "metadata": {
+                "behaviour": "others",
+                "id_graph": [],
+                "event_map": []
+              }
             },
-            "properties": {}
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ],
+            "sourceDefinedCursor": true,
+            "defaultCursorField": [
+              "segments.date"
+            ],
+            "sourceDefinedPrimaryKey": [],
+            "namespace": null
           },
-          "supportedSyncModes": [
-            "full_refresh",
-            "incremental"
-          ],
-          "sourceDefinedCursor": true,
-          "defaultCursorField": [
-            "segments.date"
-          ],
-          "sourceDefinedPrimaryKey": [],
-          "namespace": null
+          "config": {
+            "syncMode": "full_refresh",
+            "cursorField": [
+              "segments.date"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              "campaign.id",
+              "ad_group_ad.ad.id"
+            ],
+            "aliasName": "ad_group_ad_report",
+            "selected": true
+          }
         },
-        "config": {
-          "syncMode": "full_refresh",
-          "cursorField": [
-            "segments.date"
-          ],
-          "destinationSyncMode": "append",
-          "primaryKey": [],
-          "aliasName": "click_view",
-          "selected": true
+        {
+          "stream": {
+            "name": "click_view",
+            "jsonSchema": {
+              "type": "object",
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "metadata": {
+                "behaviour": "Default",
+                "event_map": [],
+                "id_mapping": [
+                  {
+                    "map_provider": "gclid",
+                    "map_column": "click_view.gclid"
+                  }
+                ]
+              },
+              "properties": {}
+            },
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ],
+            "sourceDefinedCursor": true,
+            "defaultCursorField": [
+              "segments.date"
+            ],
+            "sourceDefinedPrimaryKey": [],
+            "namespace": null
+          },
+          "config": {
+            "syncMode": "full_refresh",
+            "cursorField": [
+              "segments.date"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [],
+            "aliasName": "click_view",
+            "selected": true
+          }
         }
-      }
-    ]
+      ]
+    }
   }
 }
