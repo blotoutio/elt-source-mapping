@@ -2,7 +2,7 @@
   "id": 1,
   "source_name": "google",
   "created_at": "2021-07-08 00:00:00",
-  "last_updated_at": "2021-09-13 00:00:00",
+  "last_updated_at": "2021-09-30 00:00:00",
   "payload": {
     "syncCatalog": {
       "streams": [
@@ -10,9 +10,11 @@
           "stream": {
             "name": "ad_group_ad_report",
             "jsonSchema": {
+              "type": "object",
+              "$schema": "http://json-schema.org/draft-07/schema#",
               "properties": {},
               "metadata": {
-                "behaviour": "others",
+                "behaviour": "default",
                 "id_graph": [],
                 "event_map": []
               }
@@ -49,7 +51,7 @@
               "type": "object",
               "$schema": "http://json-schema.org/draft-07/schema#",
               "metadata": {
-                "behaviour": "Default",
+                "behaviour": "default",
                 "event_map": [],
                 "id_mapping": [
                   {
@@ -79,6 +81,44 @@
             "destinationSyncMode": "append",
             "primaryKey": [],
             "aliasName": "click_view",
+            "selected": true
+          }
+        },
+        {
+          "stream": {
+            "name": "campaigns",
+            "jsonSchema": {
+              "type": "object",
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {},
+              "metadata": {
+                "behaviour": "default",
+                "id_graph": [],
+                "event_map": []
+              }
+            },
+            "supportedSyncModes": [
+              "full_refresh"
+            ],
+            "sourceDefinedCursor": null,
+            "defaultCursorField": [],
+            "sourceDefinedPrimaryKey": [
+              [
+                "campaign.id"
+              ]
+            ],
+            "namespace": null
+          },
+          "config": {
+            "syncMode": "full_refresh",
+            "cursorField": [],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "campaign.id"
+              ]
+            ],
+            "aliasName": "campaigns",
             "selected": true
           }
         }
