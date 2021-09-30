@@ -2,7 +2,7 @@
   "id": 2,
   "source_name": "facebook",
   "created_at": "2021-07-08 00:00:00",
-  "last_updated_at": "2021-09-13 00:00:00",
+  "last_updated_at": "2021-09-30 00:00:00",
   "payload": {
     "syncCatalog": {
       "streams": [
@@ -75,6 +75,49 @@
             "supportedSyncModes": [
               "incremental"
             ]
+          }
+        },
+        {
+          "stream": {
+            "name": "campaigns",
+            "jsonSchema": {
+              "type": "object",
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "properties": {},
+              "metadata": {
+                "behaviour": "default",
+                "id_graph": [],
+                "event_map": []
+              }
+            },
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ],
+            "sourceDefinedCursor": true,
+            "defaultCursorField": [
+              "updated_time"
+            ],
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "namespace": null
+          },
+          "config": {
+            "syncMode": "full_refresh",
+            "cursorField": [
+              "updated_time"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "aliasName": "campaigns",
+            "selected": true
           }
         }
       ]
