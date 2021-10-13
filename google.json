@@ -31,11 +31,11 @@
             "namespace": null
           },
           "config": {
-            "syncMode": "full_refresh",
+            "syncMode": "incremental",
             "cursorField": [
               "segments.date"
             ],
-            "destinationSyncMode": "append",
+            "destinationSyncMode": "append_dedup",
             "primaryKey": [
               "campaign.id",
               "ad_group_ad.ad.id"
@@ -74,11 +74,11 @@
             "namespace": null
           },
           "config": {
-            "syncMode": "full_refresh",
+            "syncMode": "incremental",
             "cursorField": [
               "segments.date"
             ],
-            "destinationSyncMode": "append",
+            "destinationSyncMode": "append_dedup",
             "primaryKey": [],
             "aliasName": "click_view",
             "selected": true
