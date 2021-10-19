@@ -79,7 +79,7 @@
               "segments.date"
             ],
             "destinationSyncMode": "append_dedup",
-            "primaryKey": [],
+            "primaryKey": [["click_view.gclid"]],
             "aliasName": "click_view",
             "selected": true
           }
