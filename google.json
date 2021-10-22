@@ -37,8 +37,18 @@
             ],
             "destinationSyncMode": "append_dedup",
             "primaryKey": [
-              "campaign.id",
-              "ad_group_ad.ad.id"
+              [
+                "campaign.id"
+              ],
+              [
+                "ad_group_ad.ad.id"
+              ],
+              [
+                "segments.ad_network_type"
+              ],
+              [
+                "segments.date"
+              ]
             ],
             "aliasName": "ad_group_ad_report",
             "selected": true
@@ -79,7 +89,11 @@
               "segments.date"
             ],
             "destinationSyncMode": "append_dedup",
-            "primaryKey": [["click_view.gclid"]],
+            "primaryKey": [
+              [
+                "click_view.gclid"
+              ]
+            ],
             "aliasName": "click_view",
             "selected": true
           }
