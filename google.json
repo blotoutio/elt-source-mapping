@@ -126,7 +126,7 @@
           "config": {
             "syncMode": "full_refresh",
             "cursorField": [],
-            "destinationSyncMode": "append",
+            "destinationSyncMode": "overwrite",
             "primaryKey": [
               [
                 "campaign.id"
