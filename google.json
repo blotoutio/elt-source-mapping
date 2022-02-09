@@ -15,7 +15,7 @@
               "properties": {},
               "metadata": {
                 "behaviour": "default",
-                "id_graph": [],
+                "id_mapping": [],
                 "event_map": []
               }
             },
@@ -107,7 +107,7 @@
               "properties": {},
               "metadata": {
                 "behaviour": "default",
-                "id_graph": [],
+                "id_mapping": [],
                 "event_map": []
               }
             },
