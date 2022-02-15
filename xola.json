@@ -1,0 +1,469 @@
+{
+  "id": 3,
+  "source_name": "xola",
+  "created_at": "2022-02-14 00:00:00",
+  "last_updated_at": "2022-02-15 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "config": {
+            "aliasName": "transactions",
+            "cursorField": [],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "full_refresh"
+          },
+          "stream": {
+            "defaultCursorField": [],
+            "jsonSchema": {
+              "$schema": "http://json-schema.org/draft-06/schema#",
+              "additionalProperties": false,
+              "metadata": {
+                "behaviour": "Default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {
+                "amount": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "balance": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "createdAt": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "createdBy": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "currency": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "id": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "method": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "order": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "seller": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "source": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                }
+              },
+              "title": "Items",
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "transactions",
+            "namespace": null,
+            "sourceDefinedCursor": null,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh"
+            ]
+          }
+        },
+        {
+          "config": {
+            "aliasName": "orders",
+            "cursorField": [],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "order_id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "full_refresh"
+          },
+          "stream": {
+            "defaultCursorField": [],
+            "jsonSchema": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "additionalProperties": false,
+              "metadata": {
+                "behaviour": "events",
+                "event_map": [
+                  {
+                    "map_column": "id",
+                    "map_event": "order_id"
+                  },
+                  {
+                    "map_column": "event",
+                    "map_event": "order_event"
+                  },
+                  {
+                    "map_column": "quantity",
+                    "map_event": "order_quantity"
+                  },
+                  {
+                    "map_column": "createdAt",
+                    "map_event": "order_createdAt"
+                  },
+                  {
+                    "map_column": "arrivalTime",
+                    "map_event": "order_arrivalTime"
+                  },
+                  {
+                    "map_column": "customerName",
+                    "map_event": "order_customerName"
+                  },
+                  {
+                    "map_column": "createdBy",
+                    "map_event": "order_createdBy"
+                  },
+                  {
+                    "map_column": "source",
+                    "map_event": "event_name"
+                  }
+                ],
+                "id_mapping": [
+                  {
+                    "map_column": "customerEmail",
+                    "map_id": true,
+                    "map_provider": "website"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_id": false,
+                    "map_provider": "phone_number"
+                  }
+                ]
+              },
+              "properties": {
+                "amount": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "number"
+                  ]
+                },
+                "arrivalTime": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "createdAt": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "createdBy": {
+                  "properties": {
+                    "id": {
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    }
+                  },
+                  "selected": true,
+                  "simple_name": "",
+                  "type": "object"
+                },
+                "customerEmail": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "customerName": {
+                  "selected": true,
+                  "simple_name": "",
+                  "title": "CustomerName",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "event": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "id": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "items": {
+                  "$id": "#root/data/items/items",
+                  "default": [],
+                  "items": {
+                    "properties": {
+                      "amount": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "arrivalDatetime": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "currency": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "desc": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "event": {
+                        "properties": {
+                          "id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "guestType": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "id": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "name": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "object": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      },
+                      "quantity": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "seller": {
+                        "properties": {
+                          "id": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          }
+                        },
+                        "title": "Seller",
+                        "type": "object"
+                      },
+                      "status": {
+                        "type": [
+                          "null",
+                          "integer"
+                        ]
+                      },
+                      "ticketCode": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    },
+                    "title": "Items",
+                    "type": "object"
+                  },
+                  "selected": true,
+                  "simple_name": "",
+                  "title": "Items",
+                  "type": "array"
+                },
+                "phone": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "quantity": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "integer"
+                  ]
+                },
+                "source": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "tags": {
+                  "default": [],
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "title": "Id",
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    },
+                    "type": [
+                      "null",
+                      "object"
+                    ]
+                  },
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "array"
+                  ]
+                },
+                "travelers": {
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    },
+                    "type": [
+                      "null",
+                      "object"
+                    ]
+                  },
+                  "selected": true,
+                  "simple_name": "",
+                  "type": "array"
+                }
+              },
+              "title": "Items",
+              "type": "object"
+            },
+            "name": "orders",
+            "namespace": null,
+            "sourceDefinedCursor": null,
+            "sourceDefinedPrimaryKey": [
+              [
+                "order_id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
