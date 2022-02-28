@@ -190,6 +190,10 @@
                   {
                     "map_column": "source",
                     "map_event": "event_name"
+                  },
+                  {
+                    "map_column": "customerEmail",
+                    "map_event": "order_customerEmail"
                   }
                 ],
                 "id_mapping": [
