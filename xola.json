@@ -8,141 +8,9 @@
       "streams": [
         {
           "config": {
-            "aliasName": "transactions",
-            "cursorField": [],
-            "destinationSyncMode": "append",
-            "primaryKey": [
-              [
-                "id"
-              ]
-            ],
-            "selected": true,
-            "syncMode": "full_refresh"
-          },
-          "stream": {
-            "defaultCursorField": [],
-            "jsonSchema": {
-              "$schema": "http://json-schema.org/draft-06/schema#",
-              "additionalProperties": false,
-              "metadata": {
-                "behaviour": "Default",
-                "event_map": [],
-                "id_mapping": []
-              },
-              "properties": {
-                "amount": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "number"
-                  ]
-                },
-                "balance": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "number"
-                  ]
-                },
-                "createdAt": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "integer"
-                  ]
-                },
-                "createdBy": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "currency": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "number"
-                  ]
-                },
-                "id": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "method": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "order": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "seller": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "source": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                },
-                "type": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
-                }
-              },
-              "title": "Items",
-              "type": [
-                "null",
-                "object"
-              ]
-            },
-            "name": "transactions",
-            "namespace": null,
-            "sourceDefinedCursor": null,
-            "sourceDefinedPrimaryKey": [
-              [
-                "id"
-              ]
-            ],
-            "supportedSyncModes": [
-              "full_refresh"
-            ]
-          }
-        },
-        {
-          "config": {
             "aliasName": "orders",
             "cursorField": [],
-            "destinationSyncMode": "append",
+            "destinationSyncMode": "overwrite",
             "primaryKey": [
               [
                 "order_id"
@@ -160,12 +28,16 @@
                 "behaviour": "events",
                 "event_map": [
                   {
-                    "map_column": "id",
-                    "map_event": "order_id"
-                  },
-                  {
                     "map_column": "event",
                     "map_event": "order_event"
+                  },
+                  {
+                    "map_column": "amount",
+                    "map_event": "order_amount"
+                  },
+                  {
+                    "map_column": "order_id",
+                    "map_event": "order_id"
                   },
                   {
                     "map_column": "quantity",
@@ -173,19 +45,15 @@
                   },
                   {
                     "map_column": "createdAt",
-                    "map_event": "order_createdAt"
+                    "map_event": "order_created_at"
                   },
                   {
                     "map_column": "arrivalTime",
-                    "map_event": "order_arrivalTime"
+                    "map_event": "order_arrival_time"
                   },
                   {
                     "map_column": "customerName",
-                    "map_event": "order_customerName"
-                  },
-                  {
-                    "map_column": "createdBy",
-                    "map_event": "order_createdBy"
+                    "map_event": "order_customer_name"
                   },
                   {
                     "map_column": "source",
@@ -193,19 +61,24 @@
                   },
                   {
                     "map_column": "customerEmail",
-                    "map_event": "order_customerEmail"
+                    "map_event": "order_customer_email"
                   }
                 ],
                 "id_mapping": [
                   {
                     "map_column": "customerEmail",
-                    "map_id": true,
-                    "map_provider": "website"
+                    "map_id": false,
+                    "map_provider": "website_web"
                   },
                   {
                     "map_column": "phone",
                     "map_id": false,
                     "map_provider": "phone_number"
+                  },
+                  {
+                    "map_column": "order_id",
+                    "map_id": true,
+                    "map_provider": "xola_order_id"
                   }
                 ]
               },
@@ -406,49 +279,6 @@
                     "null",
                     "string"
                   ]
-                },
-                "tags": {
-                  "default": [],
-                  "items": {
-                    "properties": {
-                      "id": {
-                        "title": "Id",
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      }
-                    },
-                    "type": [
-                      "null",
-                      "object"
-                    ]
-                  },
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "array"
-                  ]
-                },
-                "travelers": {
-                  "items": {
-                    "properties": {
-                      "id": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      }
-                    },
-                    "type": [
-                      "null",
-                      "object"
-                    ]
-                  },
-                  "selected": true,
-                  "simple_name": "",
-                  "type": "array"
                 }
               },
               "title": "Items",
