@@ -45,7 +45,7 @@
                   },
                   {
                     "map_column": "createdAt",
-                    "map_event": "order_created_at"
+                    "map_event": "event_datetime"
                   },
                   {
                     "map_column": "arrivalTime",
