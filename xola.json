@@ -293,7 +293,8 @@
               ]
             ],
             "supportedSyncModes": [
-              "full_refresh"
+              "full_refresh",
+	      	  "incremental"
             ]
           }
         }
