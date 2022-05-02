@@ -67,6 +67,26 @@
                   {
                     "map_column": "verified_email",
                     "map_event": "email_verified"
+                  },
+                  {
+                    "map_column": "accepts_marketing",
+                    "map_event": "persona_consent"
+                  },
+                  {
+                    "map_column": "updated_at",
+                    "map_event": "persona_updated_date"
+                  },
+                  {
+                    "map_column": "orders_count",
+                    "map_event": "orders_todate"
+                  },
+                  {
+                    "map_column": "currency",
+                    "map_event": "currency"
+                  },
+                  {
+                    "map_column": "tax_exempt",
+                    "map_event": "tax_exempt"
                   }
                 ],
                 "id_mapping": [
