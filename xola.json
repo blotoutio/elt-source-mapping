@@ -294,7 +294,7 @@
             ],
             "supportedSyncModes": [
               "full_refresh",
-	      	  "incremental"
+              "incremental"
             ]
           }
         }
