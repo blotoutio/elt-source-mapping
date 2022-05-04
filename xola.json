@@ -9,7 +9,7 @@
         {
           "config": {
             "aliasName": "orders",
-            "cursorField": ["updated_at"],
+            "cursorField": ["updatedAt"],
             "destinationSyncMode": "overwrite",
             "primaryKey": [
               [
@@ -20,7 +20,7 @@
             "syncMode": "full_refresh"
           },
           "stream": {
-            "defaultCursorField": ["updated_at"],
+            "defaultCursorField": ["updatedAt"],
             "jsonSchema": {
               "$schema": "http://json-schema.org/draft-07/schema#",
               "additionalProperties": false,
@@ -100,6 +100,14 @@
                   ]
                 },
                 "createdAt": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "updatedAt": {
                   "selected": true,
                   "simple_name": "",
                   "type": [
