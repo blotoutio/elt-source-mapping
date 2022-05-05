@@ -20,7 +20,7 @@
             "syncMode": "full_refresh"
           },
           "stream": {
-            "defaultCursorField": ["updatedAt"],
+			"defaultCursorField": ["updatedAt"],
             "jsonSchema": {
               "$schema": "http://json-schema.org/draft-07/schema#",
               "additionalProperties": false,
@@ -48,10 +48,6 @@
                     "map_event": "event_datetime"
                   },
                   {
-                    "map_column": "arrivalTime",
-                    "map_event": "order_arrival_time"
-                  },
-                  {
                     "map_column": "customerName",
                     "map_event": "order_customer_name"
                   },
@@ -71,11 +67,6 @@
                     "map_provider": "website_web"
                   },
                   {
-                    "map_column": "phone",
-                    "map_id": false,
-                    "map_provider": "phone_number"
-                  },
-                  {
                     "map_column": "order_id",
                     "map_id": true,
                     "map_provider": "xola_order_id"
@@ -89,14 +80,6 @@
                   "type": [
                     "null",
                     "number"
-                  ]
-                },
-                "arrivalTime": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "integer"
                   ]
                 },
                 "createdAt": {
@@ -153,7 +136,7 @@
                     "string"
                   ]
                 },
-                "id": {
+                "order_id": {
                   "selected": true,
                   "simple_name": "",
                   "type": [
@@ -161,116 +144,42 @@
                     "string"
                   ]
                 },
-                "items": {
-                  "$id": "#root/data/items/items",
+                "tags": {
+                  "type": [
+                    "null",
+                    "array"
+                  ],
                   "default": [],
                   "items": {
+                    "type": [
+                      "null",
+                      "object"
+                    ],
                     "properties": {
-                      "amount": {
-                        "type": [
-                          "null",
-                          "integer"
-                        ]
-                      },
-                      "arrivalDatetime": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "currency": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "desc": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "event": {
-                        "properties": {
-                          "id": {
-                            "type": [
-                              "null",
-                              "string"
-                            ]
-                          }
-                        },
-                        "type": "object"
-                      },
-                      "guestType": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
                       "id": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "name": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "object": {
-                        "type": [
-                          "null",
-                          "string"
-                        ]
-                      },
-                      "quantity": {
-                        "type": [
-                          "null",
-                          "integer"
-                        ]
-                      },
-                      "seller": {
-                        "properties": {
-                          "id": {
-                            "type": [
-                              "null",
-                              "string"
-                            ]
-                          }
-                        },
-                        "title": "Seller",
-                        "type": "object"
-                      },
-                      "status": {
-                        "type": [
-                          "null",
-                          "integer"
-                        ]
-                      },
-                      "ticketCode": {
+                        "title": "Id",
                         "type": [
                           "null",
                           "string"
                         ]
                       }
-                    },
-                    "title": "Items",
-                    "type": "object"
-                  },
-                  "selected": true,
-                  "simple_name": "",
-                  "title": "Items",
-                  "type": "array"
+                    }
+                  }
                 },
-                "phone": {
-                  "selected": true,
-                  "simple_name": "",
-                  "type": [
-                    "null",
-                    "string"
-                  ]
+                "travelers": {
+                  "type": "array",
+                  "default": [],
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "title": "Id",
+                        "type": [
+                          "null",
+                          "string"
+                        ]
+                      }
+                    }
+                  }
                 },
                 "quantity": {
                   "selected": true,
@@ -281,6 +190,14 @@
                   ]
                 },
                 "source": {
+                  "selected": true,
+                  "simple_name": "",
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "type": {
                   "selected": true,
                   "simple_name": "",
                   "type": [
