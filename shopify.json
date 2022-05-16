@@ -645,7 +645,7 @@
                   },
                   {
                     "map_column": "updated_at",
-                    "map_event": "order-updated_at"
+                    "map_event": "event_date"
                   },
                   {
                     "map_column": "checkout_id",
