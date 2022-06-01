@@ -121,53 +121,34 @@
               "$schema": "http://json-schema.org/draft-07/schema#",
               "additionalProperties": false,
               "metadata": {
-                "behaviour": "events",
+                "behaviour": "profile",
                 "event_map": [
                   {
-                    "map_column": "event",
-                    "map_event": "order_event"
-                  },
-                  {
-                    "map_column": "amount",
-                    "map_event": "order_amount"
-                  },
-                  {
-                    "map_column": "order_id",
-                    "map_event": "order_id"
-                  },
-                  {
-                    "map_column": "quantity",
-                    "map_event": "order_quantity"
+                    "map_column": "id",
+                    "map_event": "persona_id"
                   },
                   {
                     "map_column": "createdAt",
-                    "map_event": "event_datetime"
+                    "map_event": "persona_creation_date"
                   },
                   {
                     "map_column": "customerName",
-                    "map_event": "order_customer_name"
-                  },
-                  {
-                    "map_column": "source",
-                    "map_event": "event_name"
+                    "map_event": "persona_username"
                   },
                   {
                     "map_column": "customerEmail",
-                    "map_event": "order_customer_email"
+                    "map_event": "persona_email"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_event": "persona_phone"
+                  },
+                  {
+                    "map_column": "dateOfBirth",
+                    "map_event": "persona_dob"
                   }
                 ],
-                "id_mapping": [
-                  {
-                    "map_column": "customerEmail",
-                    "map_id": false,
-                    "map_provider": "website_web"
-                  },
-                  {
-                    "map_column": "order_id",
-                    "map_id": true,
-                    "map_provider": "xola_order_id"
-                  }
-                ]
+                "id_mapping": []
               },
               "properties": {},
               "title": "Items",
