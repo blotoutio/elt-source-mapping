@@ -259,7 +259,7 @@
                   },
                   {
                     "map_column": "cancelled_at",
-                    "map_event": "order_canceled_at"
+                    "map_event": "order_cancelled_at"
                   },
                   {
                     "map_column": "order_number",
