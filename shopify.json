@@ -87,23 +87,27 @@
                   {
                     "map_column": "tax_exempt",
                     "map_event": "tax_exempt"
+                  },
+                  {
+                    "map_column": "tags",
+                    "map_event": "persona_tags"
                   }
                 ],
                 "id_mapping": [
                   {
                     "map_column": "email",
                     "map_id": true,
-                    "map_provider": "website"
-                  },
-                  {
-                    "map_column": "phone",
-                    "map_id": false,
-                    "map_provider": "customer-phone"
+                    "map_provider": "shopify_email"
                   },
                   {
                     "map_column": "id",
                     "map_id": false,
-                    "map_provider": "customer-id"
+                    "map_provider": "customer_id"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_id": false,
+                    "map_provider": "customer_phone"
                   }
                 ]
               },
@@ -154,215 +158,159 @@
                 "behaviour": "events",
                 "event_map": [
                   {
-                    "map_column": "id",
-                    "map_event": "order-id"
-                  },
-                  {
-                    "map_column": "contact_email",
-                    "map_event": "order-email"
-                  },
-                  {
-                    "map_column": "user_id",
-                    "map_event": "order-user-id"
-                  },
-                  {
-                    "map_column": "buyer_accepts_marketing",
-                    "map_event": "user-consent"
-                  },
-                  {
-                    "map_column": "name",
-                    "map_event": "order-name"
-                  },
-                  {
-                    "map_column": "note",
-                    "map_event": "order-notes"
-                  },
-                  {
-                    "map_column": "tags",
-                    "map_event": "order-tags"
-                  },
-                  {
-                    "map_column": "email",
-                    "map_event": "order-email"
-                  },
-                  {
-                    "map_column": "phone",
-                    "map_event": "order-phone"
-                  },
-                  {
-                    "map_column": "number",
-                    "map_event": "order-number"
-                  },
-                  {
-                    "map_column": "gateway",
-                    "map_event": "order-gateway"
-                  },
-                  {
-                    "map_column": "currency",
-                    "map_event": "order-currency"
-                  },
-                  {
-                    "map_column": "device_id",
-                    "map_event": "order-device-id"
-                  },
-                  {
-                    "map_column": "confirmed",
-                    "map_event": "order-confirmed"
-                  },
-                  {
-                    "map_column": "closed_at",
-                    "map_event": "order-closed-at"
-                  },
-                  {
-                    "map_column": "browser_ip",
-                    "map_event": "order-browser_ip"
-                  },
-                  {
-                    "map_column": "total_tax",
-                    "map_event": "order-total_tax"
-                  },
-                  {
-                    "map_column": "cart_token",
-                    "map_event": "order-cart_token"
-                  },
-                  {
-                    "map_column": "created_at",
-                    "map_event": "order-created_at"
-                  },
-                  {
-                    "map_column": "line_items",
-                    "map_event": "order-line_items"
-                  },
-                  {
-                    "map_column": "source_url",
-                    "map_event": "order-source_url"
-                  },
-                  {
                     "map_column": "updated_at",
                     "map_event": "event_datetime"
-                  },
-                  {
-                    "map_column": "checkout_id",
-                    "map_event": "order-checkout_id"
-                  },
-                  {
-                    "map_column": "reference",
-                    "map_event": "order-reference"
-                  },
-                  {
-                    "map_column": "location_id",
-                    "map_event": "order-location_id"
-                  },
-                  {
-                    "map_column": "total_price",
-                    "map_event": "order-total_price"
                   },
                   {
                     "map_column": "cancelled_at",
                     "map_event": "order_cancelled_at"
                   },
                   {
+                    "map_column": "source_name",
+                    "map_event": "event_name"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_event": "order_id"
+                  },
+                  {
+                    "map_column": "tags",
+                    "map_event": "order_tags"
+                  },
+                  {
+                    "map_column": "gateway",
+                    "map_event": "order_gateway"
+                  },
+                  {
+                    "map_column": "user_id",
+                    "map_event": "order_user_id"
+                  },
+                  {
+                    "map_column": "currency",
+                    "map_event": "order_currency"
+                  },
+                  {
+                    "map_column": "closed_at",
+                    "map_event": "order_closed_at"
+                  },
+                  {
+                    "map_column": "confirmed",
+                    "map_event": "order_confirmed"
+                  },
+                  {
+                    "map_column": "total_tax",
+                    "map_event": "order_total_tax"
+                  },
+                  {
+                    "map_column": "browser_ip",
+                    "map_event": "order_browser_ip"
+                  },
+                  {
+                    "map_column": "created_at",
+                    "map_event": "order_created_at"
+                  },
+                  {
+                    "map_column": "total_price",
+                    "map_event": "order_total_price"
+                  },
+                  {
                     "map_column": "order_number",
-                    "map_event": "order-number"
+                    "map_event": "order_number"
                   },
                   {
                     "map_column": "processed_at",
-                    "map_event": "order-processed_at"
+                    "map_event": "order_processed_at"
                   },
                   {
                     "map_column": "total_weight",
-                    "map_event": "order-total_weight"
+                    "map_event": "order_total_weight"
                   },
                   {
                     "map_column": "cancel_reason",
-                    "map_event": "order-cancel_reason"
+                    "map_event": "order_cancel_reason"
                   },
                   {
                     "map_column": "referring_site",
-                    "map_event": "order-referring_site"
+                    "map_event": "order_referring_site"
                   },
                   {
                     "map_column": "subtotal_price",
-                    "map_event": "order-subtotal_price"
+                    "map_event": "order_subtotal_price"
                   },
                   {
                     "map_column": "taxes_included",
-                    "map_event": "order-taxes_included"
+                    "map_event": "order_taxes_included"
                   },
                   {
                     "map_column": "customer_locale",
-                    "map_event": "order-customer_locale"
+                    "map_event": "order_customer_locale"
                   },
                   {
                     "map_column": "total_discounts",
-                    "map_event": "order-total_discounts"
+                    "map_event": "order_total_discounts"
                   },
                   {
                     "map_column": "total_price_usd",
-                    "map_event": "order-total_price_usd"
+                    "map_event": "order_total_price_usd"
                   },
                   {
                     "map_column": "landing_site_ref",
-                    "map_event": "order-landing_site_ref"
-                  },
-                  {
-                    "map_column": "order_status_url",
-                    "map_event": "order-status_url"
+                    "map_event": "order_landing_site_ref"
                   },
                   {
                     "map_column": "current_total_tax",
-                    "map_event": "order-current_total_tax"
-                  },
-                  {
-                    "map_column": "fulfillment_status",
-                    "map_event": "order-fulfillment_status"
+                    "map_event": "order_current_total_tax"
                   },
                   {
                     "map_column": "processing_method",
-                    "map_event": "order-processing_method"
-                  },
-                  {
-                    "map_column": "current_total_price",
-                    "map_event": "order-current_total_price"
-                  },
-                  {
-                    "map_column": "presentment_currency",
-                    "map_event": "order-presentment_currency"
-                  },
-                  {
-                    "map_column": "current_subtotal_price",
-                    "map_event": "order-current_subtotal_price"
-                  },
-                  {
-                    "map_column": "total_line_items_price",
-                    "map_event": "order-total_line_items_price"
-                  },
-                  {
-                    "map_column": "current_total_discounts",
-                    "map_event": "order-current_total_discounts"
-                  },
-                  {
-                    "map_column": "total_tip_received",
-                    "map_event": "order-total_tip_received"
-                  },
-                  {
-                    "map_column": "total_outstanding",
-                    "map_event": "order-total_outstanding"
+                    "map_event": "order_processing_method"
                   },
                   {
                     "map_column": "source_identifier",
-                    "map_event": "order-source_identifier"
+                    "map_event": "order_source_identifier"
                   },
                   {
-                    "map_column": "source_name",
-                    "map_event": "event_name"
+                    "map_column": "total_outstanding",
+                    "map_event": "order_total_outstanding"
+                  },
+                  {
+                    "map_column": "fulfillment_status",
+                    "map_event": "order_fulfillment_status"
+                  },
+                  {
+                    "map_column": "total_tip_received",
+                    "map_event": "order_total_tip_received"
+                  },
+                  {
+                    "map_column": "current_total_price",
+                    "map_event": "order_current_total_price"
+                  },
+                  {
+                    "map_column": "presentment_currency",
+                    "map_event": "order_presentment_currency"
+                  },
+                  {
+                    "map_column": "current_subtotal_price",
+                    "map_event": "order_current_subtotal_price"
+                  },
+                  {
+                    "map_column": "total_line_items_price",
+                    "map_event": "order_total_line_items_price"
+                  },
+                  {
+                    "map_column": "current_total_discounts",
+                    "map_event": "order_current_total_discounts"
+                  },
+                  {
+                    "map_column": "email",
+                    "map_event": "order_email"
                   }
                 ],
                 "id_mapping": [
                   {
-                    "map_column": "email",
                     "map_id": true,
-                    "map_provider": "website"
+                    "map_column": "email",
+                    "map_provider": "shopify_email"
                   }
                 ]
               },
