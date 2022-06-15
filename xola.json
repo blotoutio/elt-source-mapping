@@ -105,6 +105,9 @@
             "primaryKey": [
               [
                 "user_id"
+              ],
+              [
+                "customer_name"
               ]
             ],
             "selected": true,
@@ -173,6 +176,9 @@
             "sourceDefinedPrimaryKey": [
               [
                 "user_id"
+              ],
+              [
+                "customer_name"
               ]
             ],
             "supportedSyncModes": [
