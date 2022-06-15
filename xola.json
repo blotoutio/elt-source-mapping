@@ -32,6 +32,14 @@
                 "behaviour": "events",
                 "event_map": [
                   {
+                    "map_column": "tags",
+                    "map_event": "order_tags"
+                  },
+                  {
+                    "map_column": "type",
+                    "map_event": "order_type"
+                  },
+                  {
                     "map_column": "event",
                     "map_event": "order_event"
                   },
@@ -46,6 +54,10 @@
                   {
                     "map_column": "quantity",
                     "map_event": "order_quantity"
+                  },
+                  {
+                    "map_column": "travelers",
+                    "map_event": "order_travelers"
                   },
                   {
                     "map_column": "updatedAt",
