@@ -10,7 +10,7 @@
           "config": {
             "aliasName": "orders",
             "cursorField": [
-              "updatedAt"
+              "updated_at"
             ],
             "destinationSyncMode": "append",
             "primaryKey": [
@@ -48,7 +48,7 @@
                     "map_event": "order_quantity"
                   },
                   {
-                    "map_column": "createdAt",
+                    "map_column": "updatedAt",
                     "map_event": "event_datetime"
                   },
                   {
@@ -67,12 +67,12 @@
                 "id_mapping": [
                   {
                     "map_column": "customerEmail",
-                    "map_id": false,
-                    "map_provider": "website_web"
+                    "map_id": true,
+                    "map_provider": "website"
                   },
                   {
                     "map_column": "order_id",
-                    "map_id": true,
+                    "map_id": false,
                     "map_provider": "xola_order_id"
                   }
                 ]
@@ -99,15 +99,12 @@
           "config": {
             "aliasName": "users",
             "cursorField": [
-              "updatedAt"
+              "waiver_updated_at"
             ],
             "destinationSyncMode": "append",
             "primaryKey": [
               [
-                "order_id"
-              ],
-              [
-                "id"
+                "user_id"
               ]
             ],
             "selected": true,
@@ -115,7 +112,7 @@
           },
           "stream": {
             "defaultCursorField": [
-              "updatedAt"
+              "waiver_updated_at"
             ],
             "jsonSchema": {
               "$schema": "http://json-schema.org/draft-07/schema#",
@@ -124,11 +121,11 @@
                 "behaviour": "profile",
                 "event_map": [
                   {
-                    "map_column": "id",
+                    "map_column": "user_id",
                     "map_event": "persona_id"
                   },
                   {
-                    "map_column": "createdAt",
+                    "map_column": "waiver_createdAt",
                     "map_event": "persona_creation_date"
                   },
                   {
@@ -148,7 +145,23 @@
                     "map_event": "persona_dob"
                   }
                 ],
-                "id_mapping": []
+                "id_mapping": [
+                  {
+                    "map_column": "customerEmail",
+                    "map_id": true,
+                    "map_provider": "website"
+                  },
+                  {
+                    "map_column": "user_id",
+                    "map_id": false,
+                    "map_provider": "customer_id"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_id": false,
+                    "map_provider": "customer_phone"
+                  }
+                ]
               },
               "properties": {},
               "title": "Items",
@@ -159,10 +172,7 @@
             "sourceDefinedCursor": true,
             "sourceDefinedPrimaryKey": [
               [
-                "order_id"
-              ],
-              [
-                "id"
+                "user_id"
               ]
             ],
             "supportedSyncModes": [
