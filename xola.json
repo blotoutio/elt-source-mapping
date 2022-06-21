@@ -45,7 +45,7 @@
                   },
                   {
                     "map_column": "amount",
-                    "map_event": "order_amount"
+                    "map_event": "order_total_price"
                   },
                   {
                     "map_column": "order_id",
@@ -81,7 +81,7 @@
                   },
                   {
                     "map_column": "customerEmail",
-                    "map_event": "order_customer_email"
+                    "map_event": "order_email"
                   }
                 ],
                 "id_mapping": [
@@ -119,7 +119,7 @@
           "config": {
             "aliasName": "users",
             "cursorField": [
-              "waiver_updated_at"
+              "order_updated_at"
             ],
             "destinationSyncMode": "append",
             "primaryKey": [
@@ -135,7 +135,7 @@
           },
           "stream": {
             "defaultCursorField": [
-              "waiver_updated_at"
+              "order_updated_at"
             ],
             "jsonSchema": {
               "$schema": "http://json-schema.org/draft-07/schema#",
