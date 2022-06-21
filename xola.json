@@ -121,7 +121,7 @@
             "cursorField": [
               "order_updated_at"
             ],
-            "destinationSyncMode": "append",
+            "destinationSyncMode": "append_dedup",
             "primaryKey": [
               [
                 "user_id"
