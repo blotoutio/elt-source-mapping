@@ -56,6 +56,14 @@
                     "map_event": "order_quantity"
                   },
                   {
+                    "map_column": "createdAt",
+                    "map_event": "order_created_at"
+                  },
+                  {
+                    "map_column": "createdBy",
+                    "map_event": "order_user_id"
+                  },
+                  {
                     "map_column": "travelers",
                     "map_event": "order_travelers"
                   },
