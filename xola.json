@@ -117,7 +117,7 @@
         },
         {
           "config": {
-            "aliasName": "users",
+            "aliasName": "customers",
             "cursorField": [
               "order_updated_at"
             ],
@@ -190,7 +190,7 @@
               "title": "Items",
               "type": "object"
             },
-            "name": "users",
+            "name": "customers",
             "namespace": null,
             "sourceDefinedCursor": true,
             "sourceDefinedPrimaryKey": [
