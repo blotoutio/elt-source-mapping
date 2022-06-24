@@ -52,10 +52,6 @@
                     "map_event": "order_id"
                   },
                   {
-                    "map_column": "quantity",
-                    "map_event": "order_quantity"
-                  },
-                  {
                     "map_column": "createdAt",
                     "map_event": "order_created_at"
                   },
