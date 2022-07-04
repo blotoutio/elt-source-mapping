@@ -202,6 +202,57 @@
               "incremental"
             ]
           }
+        },
+        {
+          "config": {
+            "aliasName": "line_items",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append_dedup",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "line_items",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
         }
       ]
     }
