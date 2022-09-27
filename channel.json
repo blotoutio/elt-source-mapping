@@ -3,131 +3,133 @@
   "source_name": "channel_config",
   "created_at": "2022-09-26 00:00:00",
   "last_updated_at": "2022-09-26 00:00:00",
-  "payload": [
-    {
-      "channel_name": "Klaviyo",
-      "channel_category": [
-        "SMS & Push",
-        "Email"
-      ],
-      "configuration": [
-        {
-          "key": "Private API Key",
-          "datatype": "string",
-          "enum": null,
-          "description": "Private API Key",
-          "has_mandatory": 1
-        }
-      ]
-    },
-    {
-      "channel_name": "Smart",
-      "channel_category": [
-        "Advertising"
-      ],
-      "configuration": [
-        {
-          "key": "Client ID",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Secret Token",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Provider ID",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        }
-      ]
-    },
-    {
-      "channel_name": "Facebook",
-      "channel_category": [
-        "Advertising"
-      ],
-      "configuration": [
-        {
-          "key": "Account ID",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Access Token",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        }
-      ]
-    },
-    {
-      "channel_name": "Google",
-      "channel_category": [
-        "Advertising"
-      ],
-      "configuration": [
-        {
-          "key": "Client ID",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Client Secret",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Refresh Token",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Developer Token",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        },
-        {
-          "key": "Customer ID",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        }
-      ]
-    },
-    {
-      "channel_name": "Mailchimp",
-      "channel_category": [
-        "Email"
-      ],
-      "configuration": [
-        {
-          "key": "Access Token",
-          "datatype": "string",
-          "enum": null,
-          "description": "",
-          "has_mandatory": 1
-        }
-      ]
-    }
-  ]
+  "payload": {
+    "schema": [
+      {
+        "channel_name": "Klaviyo",
+        "channel_category": [
+          "SMS & Push",
+          "Email"
+        ],
+        "configuration": [
+          {
+            "key": "Private API Key",
+            "datatype": "string",
+            "enum": null,
+            "description": "Private API Key",
+            "has_mandatory": 1
+          }
+        ]
+      },
+      {
+        "channel_name": "Smart",
+        "channel_category": [
+          "Advertising"
+        ],
+        "configuration": [
+          {
+            "key": "Client ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Secret Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Provider ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          }
+        ]
+      },
+      {
+        "channel_name": "Facebook",
+        "channel_category": [
+          "Advertising"
+        ],
+        "configuration": [
+          {
+            "key": "Account ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Access Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          }
+        ]
+      },
+      {
+        "channel_name": "Google",
+        "channel_category": [
+          "Advertising"
+        ],
+        "configuration": [
+          {
+            "key": "Client ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Client Secret",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Refresh Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Developer Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Customer ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          }
+        ]
+      },
+      {
+        "channel_name": "Mailchimp",
+        "channel_category": [
+          "Email"
+        ],
+        "configuration": [
+          {
+            "key": "Access Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "",
+            "has_mandatory": 1
+          }
+        ]
+      }
+    ]
+  }
 }
