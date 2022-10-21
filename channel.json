@@ -129,6 +129,28 @@
             "has_mandatory": 1
           }
         ]
+      },
+      {
+        "channel_name": "Tiktok",
+        "channel_category": [
+          "Advertising"
+        ],
+        "configuration": [
+          {
+            "key": "Access Token",
+            "datatype": "string",
+            "enum": null,
+            "description": "Access Token",
+            "has_mandatory": 1
+          },
+          {
+            "key": "Advertiser ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "Advertiser ID",
+            "has_mandatory": 1
+          }
+        ]
       }
     ]
   }
