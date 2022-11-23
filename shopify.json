@@ -167,6 +167,10 @@
                   },
                   {
                     "map_column": "source_name",
+                    "map_event": "order_source_name"
+                  },
+                  {
+                    "map_column": "event_name",
                     "map_event": "event_name"
                   },
                   {
@@ -377,51 +381,6 @@
               ],
               [
                 "order_id"
-              ]
-            ],
-            "supportedSyncModes": [
-              "full_refresh",
-              "incremental"
-            ]
-          }
-        },
-        {
-          "config": {
-            "aliasName": "transactions",
-            "cursorField": [
-              "created_at"
-            ],
-            "destinationSyncMode": "append",
-            "primaryKey": [
-              [
-                "id"
-              ]
-            ],
-            "selected": true,
-            "syncMode": "incremental"
-          },
-          "stream": {
-            "defaultCursorField": [
-              "created_at"
-            ],
-            "jsonSchema": {
-              "metadata": {
-                "behaviour": "default",
-                "event_map": [],
-                "id_mapping": []
-              },
-              "properties": {},
-              "type": [
-                "null",
-                "object"
-              ]
-            },
-            "name": "transactions",
-            "namespace": null,
-            "sourceDefinedCursor": true,
-            "sourceDefinedPrimaryKey": [
-              [
-                "id"
               ]
             ],
             "supportedSyncModes": [
