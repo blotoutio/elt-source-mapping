@@ -112,7 +112,15 @@
             "enum": null,
             "description": "",
             "has_mandatory": 1
+          },
+          {
+            "key": "Login Customer ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "Login Customer ID for Managed Accounts (Optional)",
+            "has_mandatory": 0
           }
+          
         ]
       },
       {
