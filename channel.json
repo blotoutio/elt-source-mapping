@@ -117,8 +117,8 @@
             "key": "Login Customer ID",
             "datatype": "string",
             "enum": null,
-            "description": "Login Customer ID for Managed Accounts (Optional)",
-            "has_mandatory": 0
+            "description": "Login Customer ID for Managed Accounts (Optional) or same Customer ID",
+            "has_mandatory": 1
           }
           
         ]
