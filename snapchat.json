@@ -1,0 +1,653 @@
+{
+  "id": 5,
+  "source_name": "snapchat",
+  "created_at": "2022-11-25 00:00:00",
+  "last_updated_at": "2022-11-27 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "stream": {
+            "name": "ads_stats_daily",
+            "jsonSchema": {
+              "type": [
+                "null",
+                "object"
+              ],
+              "metadata": {
+                "behaviour": "Default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {
+                "id": {
+                  "type": [
+                    "string"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "type": {
+                  "type": [
+                    "string"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "saves": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "spend": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "shares": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "swipes": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "uniques": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "end_time": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "format": "date-time",
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "frequency": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "quartile_1": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "quartile_2": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "quartile_3": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "start_time": {
+                  "type": [
+                    "null",
+                    "string"
+                  ],
+                  "format": "date-time",
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "granularity": {
+                  "type": [
+                    "string"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "impressions": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "total_reach": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "video_views": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "earned_reach": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "ios_installs": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "native_leads": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "custom_event_1": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "custom_event_2": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "custom_event_3": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "custom_event_4": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "custom_event_5": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "total_installs": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_rate": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_save": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "video_views_15s": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "view_completion": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "android_installs": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_login": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_share": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "paid_impressions": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "play_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "swipe_up_percent": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "view_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_invite": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "total_impressions": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_uniques": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_ad_view": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_reserve": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "earned_impressions": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "screen_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_ad_click": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_add_cart": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_searches": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_frequency": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "avg_view_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_app_opens": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_list_view": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_purchases": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_subscribe": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_quartile_1": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_quartile_2": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_quartile_3": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_page_views": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_impressions": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "avg_screen_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_add_billing": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_start_trial": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "video_views_time_based": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_view_content": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_spend_credits": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_start_checkout": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_view_completion": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_add_to_wishlist": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_level_completes": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_purchases_value": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_complete_tutorial": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_avg_view_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "conversion_achievement_unlocked": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                },
+                "attachment_total_view_time_millis": {
+                  "type": [
+                    "null",
+                    "number"
+                  ],
+                  "selected": true,
+                  "simple_name": ""
+                }
+              }
+            },
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ],
+            "sourceDefinedCursor": true,
+            "defaultCursorField": [
+              "start_time"
+            ],
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ],
+              [
+                "granularity"
+              ],
+              [
+                "start_time"
+              ]
+            ],
+            "namespace": null
+          },
+          "config": {
+            "syncMode": "incremental",
+            "cursorField": [
+              "start_time"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "granularity"
+              ],
+              [
+                "start_time"
+              ]
+            ],
+            "aliasName": "ads_stats_daily",
+            "selected": true
+          }
+        }
+      ]
+    }
+  }
+}
