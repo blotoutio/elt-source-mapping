@@ -64,7 +64,7 @@
               ],
               "properties": {},
               "metadata": {
-                "behaviour": "profile",
+                "behaviour": "default",
                 "event_map":[],
                 "id_mapping": [
                   {
