@@ -120,7 +120,6 @@
             "description": "Login Customer ID for Managed Accounts (Optional) or same Customer ID",
             "has_mandatory": 1
           }
-          
         ]
       },
       {
@@ -156,6 +155,35 @@
             "datatype": "string",
             "enum": null,
             "description": "Advertiser ID",
+            "has_mandatory": 1
+          }
+        ]
+      },
+      {
+        "channel_name": "Customer.io",
+        "channel_category": [
+          "Advertising"
+        ],
+        "configuration": [
+          {
+            "key": "TRACK API KEY",
+            "datatype": "string",
+            "enum": null,
+            "description": "TRACK API KEY",
+            "has_mandatory": 1
+          },
+          {
+            "key": "SITE API KEY",
+            "datatype": "string",
+            "enum": null,
+            "description": "SITE API KEY",
+            "has_mandatory": 1
+          },
+          {
+            "key": "SITE ID",
+            "datatype": "string",
+            "enum": null,
+            "description": "SITE ID",
             "has_mandatory": 1
           }
         ]
