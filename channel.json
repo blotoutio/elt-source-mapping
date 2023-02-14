@@ -166,24 +166,24 @@
         ],
         "configuration": [
           {
-            "key": "TRACK API KEY",
+            "key": "APP API KEY",
             "datatype": "string",
             "enum": null,
-            "description": "TRACK API KEY",
+            "description": "APP API KEY",
             "has_mandatory": 1
           },
           {
-            "key": "SITE API KEY",
+            "key": "TRACKING API KEY",
             "datatype": "string",
             "enum": null,
-            "description": "SITE API KEY",
+            "description": "TRACKING API KEY",
             "has_mandatory": 1
           },
           {
-            "key": "SITE ID",
+            "key": "TRACKING SITE ID",
             "datatype": "string",
             "enum": null,
-            "description": "SITE ID",
+            "description": "TRACKING SITE ID",
             "has_mandatory": 1
           }
         ]
