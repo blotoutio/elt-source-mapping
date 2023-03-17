@@ -253,6 +253,57 @@
               "incremental"
             ]
           }
+        },
+        {
+          "config": {
+            "aliasName": "transactions",
+            "cursorField": [
+              "created_at"
+            ],
+            "destinationSyncMode": "append_dedup",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updatedAt"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "transactions",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
         }
       ]
     }
