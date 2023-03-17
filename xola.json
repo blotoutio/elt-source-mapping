@@ -274,7 +274,7 @@
           },
           "stream": {
             "defaultCursorField": [
-              "updatedAt"
+              "createdAt"
             ],
             "jsonSchema": {
               "metadata": {
