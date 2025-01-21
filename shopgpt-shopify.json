@@ -1,0 +1,440 @@
+{
+  "id": 10,
+  "source_name": "shopify",
+  "created_at": "2022-02-16 00:00:00",
+  "last_updated_at": "2022-02-16 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "config": {
+            "aliasName": "customers",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "email"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "profile",
+                "event_map": [
+                  {
+                    "map_column": "email",
+                    "map_event": "persona_email"
+                  },
+                  {
+                    "map_column": "state",
+                    "map_event": "persona_state"
+                  },
+                  {
+                    "map_column": "first_name",
+                    "map_event": "persona_firstname"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_event": "persona_phone"
+                  },
+                  {
+                    "map_column": "last_name",
+                    "map_event": "persona_lastname"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_event": "persona_id"
+                  },
+                  {
+                    "map_column": "total_spent",
+                    "map_event": "total_spent"
+                  },
+                  {
+                    "map_column": "created_at",
+                    "map_event": "persona_creation_date"
+                  },
+                  {
+                    "map_column": "verified_email",
+                    "map_event": "email_verified"
+                  },
+                  {
+                    "map_column": "accepts_marketing",
+                    "map_event": "persona_consent"
+                  },
+                  {
+                    "map_column": "updated_at",
+                    "map_event": "persona_updated_date"
+                  },
+                  {
+                    "map_column": "orders_count",
+                    "map_event": "orders_todate"
+                  },
+                  {
+                    "map_column": "currency",
+                    "map_event": "currency"
+                  },
+                  {
+                    "map_column": "tax_exempt",
+                    "map_event": "tax_exempt"
+                  },
+                  {
+                    "map_column": "tags",
+                    "map_event": "persona_tags"
+                  }
+                ],
+                "id_mapping": [
+                  {
+                    "map_column": "email",
+                    "map_id": true,
+                    "map_provider": "shopify_email"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_id": false,
+                    "map_provider": "customer_id"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_id": false,
+                    "map_provider": "customer_phone"
+                  }
+                ]
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "customers",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
+        },
+        {
+          "config": {
+            "aliasName": "orders",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "email"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "events",
+                "event_map": [
+                  {
+                    "map_column": "updated_at",
+                    "map_event": "event_datetime"
+                  },
+                  {
+                    "map_column": "cancelled_at",
+                    "map_event": "order_cancelled_at"
+                  },
+                  {
+                    "map_column": "source_name",
+                    "map_event": "order_source_name"
+                  },
+                  {
+                    "map_column": "event_name",
+                    "map_event": "event_name"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_event": "order_id"
+                  },
+                  {
+                    "map_column": "tags",
+                    "map_event": "order_tags"
+                  },
+                  {
+                    "map_column": "gateway",
+                    "map_event": "order_gateway"
+                  },
+                  {
+                    "map_column": "user_id",
+                    "map_event": "order_user_id"
+                  },
+                  {
+                    "map_column": "currency",
+                    "map_event": "order_currency"
+                  },
+                  {
+                    "map_column": "closed_at",
+                    "map_event": "order_closed_at"
+                  },
+                  {
+                    "map_column": "confirmed",
+                    "map_event": "order_confirmed"
+                  },
+                  {
+                    "map_column": "total_tax",
+                    "map_event": "order_total_tax"
+                  },
+                  {
+                    "map_column": "browser_ip",
+                    "map_event": "order_browser_ip"
+                  },
+                  {
+                    "map_column": "created_at",
+                    "map_event": "order_created_at"
+                  },
+                  {
+                    "map_column": "total_price",
+                    "map_event": "order_total_price"
+                  },
+                  {
+                    "map_column": "order_number",
+                    "map_event": "order_number"
+                  },
+                  {
+                    "map_column": "processed_at",
+                    "map_event": "order_processed_at"
+                  },
+                  {
+                    "map_column": "total_weight",
+                    "map_event": "order_total_weight"
+                  },
+                  {
+                    "map_column": "cancel_reason",
+                    "map_event": "order_cancel_reason"
+                  },
+                  {
+                    "map_column": "referring_site",
+                    "map_event": "order_referring_site"
+                  },
+                  {
+                    "map_column": "subtotal_price",
+                    "map_event": "order_subtotal_price"
+                  },
+                  {
+                    "map_column": "taxes_included",
+                    "map_event": "order_taxes_included"
+                  },
+                  {
+                    "map_column": "customer_locale",
+                    "map_event": "order_customer_locale"
+                  },
+                  {
+                    "map_column": "total_discounts",
+                    "map_event": "order_total_discounts"
+                  },
+                  {
+                    "map_column": "total_price_usd",
+                    "map_event": "order_total_price_usd"
+                  },
+                  {
+                    "map_column": "landing_site_ref",
+                    "map_event": "order_landing_site_ref"
+                  },
+                  {
+                    "map_column": "current_total_tax",
+                    "map_event": "order_current_total_tax"
+                  },
+                  {
+                    "map_column": "processing_method",
+                    "map_event": "order_processing_method"
+                  },
+                  {
+                    "map_column": "source_identifier",
+                    "map_event": "order_source_identifier"
+                  },
+                  {
+                    "map_column": "total_outstanding",
+                    "map_event": "order_total_outstanding"
+                  },
+                  {
+                    "map_column": "fulfillment_status",
+                    "map_event": "order_fulfillment_status"
+                  },
+                  {
+                    "map_column": "total_tip_received",
+                    "map_event": "order_total_tip_received"
+                  },
+                  {
+                    "map_column": "current_total_price",
+                    "map_event": "order_current_total_price"
+                  },
+                  {
+                    "map_column": "presentment_currency",
+                    "map_event": "order_presentment_currency"
+                  },
+                  {
+                    "map_column": "current_subtotal_price",
+                    "map_event": "order_current_subtotal_price"
+                  },
+                  {
+                    "map_column": "total_line_items_price",
+                    "map_event": "order_total_line_items_price"
+                  },
+                  {
+                    "map_column": "current_total_discounts",
+                    "map_event": "order_current_total_discounts"
+                  },
+                  {
+                    "map_column": "email",
+                    "map_event": "order_email"
+                  }
+                ],
+                "id_mapping": [
+                  {
+                    "map_id": true,
+                    "map_column": "email",
+                    "map_provider": "shopify_email"
+                  }
+                ]
+              },
+              "properties": {},
+              "type": "object"
+            },
+            "name": "orders",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ],
+              [
+                "email"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
+        },
+        {
+          "config": {
+            "aliasName": "line_items",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "line_items",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ],
+              [
+                "order_id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
+        },
+        {
+          "config": {
+            "aliasName": "products",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "default",
+                "event_map": [],
+                "id_mapping": []
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "products",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
