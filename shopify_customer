@@ -1,0 +1,137 @@
+{
+  "id": 101,
+  "source_name": "shopify",
+  "created_at": "2024-03-14 00:00:00",
+  "last_updated_at": "2024-03-14 00:00:00",
+  "payload": {
+    "syncCatalog": {
+      "streams": [
+        {
+          "config": {
+            "aliasName": "customers",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ],
+              [
+                "email"
+              ]
+            ],
+            "selected": true,
+            "syncMode": "incremental"
+          },
+          "stream": {
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "jsonSchema": {
+              "metadata": {
+                "behaviour": "profile",
+                "event_map": [
+                  {
+                    "map_column": "email",
+                    "map_event": "persona_email"
+                  },
+                  {
+                    "map_column": "state",
+                    "map_event": "persona_state"
+                  },
+                  {
+                    "map_column": "first_name",
+                    "map_event": "persona_firstname"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_event": "persona_phone"
+                  },
+                  {
+                    "map_column": "last_name",
+                    "map_event": "persona_lastname"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_event": "persona_id"
+                  },
+                  {
+                    "map_column": "total_spent",
+                    "map_event": "total_spent"
+                  },
+                  {
+                    "map_column": "created_at",
+                    "map_event": "persona_creation_date"
+                  },
+                  {
+                    "map_column": "verified_email",
+                    "map_event": "email_verified"
+                  },
+                  {
+                    "map_column": "accepts_marketing",
+                    "map_event": "persona_consent"
+                  },
+                  {
+                    "map_column": "updated_at",
+                    "map_event": "persona_updated_date"
+                  },
+                  {
+                    "map_column": "orders_count",
+                    "map_event": "orders_todate"
+                  },
+                  {
+                    "map_column": "currency",
+                    "map_event": "currency"
+                  },
+                  {
+                    "map_column": "tax_exempt",
+                    "map_event": "tax_exempt"
+                  },
+                  {
+                    "map_column": "tags",
+                    "map_event": "persona_tags"
+                  }
+                ],
+                "id_mapping": [
+                  {
+                    "map_column": "email",
+                    "map_id": true,
+                    "map_provider": "shopify_email"
+                  },
+                  {
+                    "map_column": "id",
+                    "map_id": false,
+                    "map_provider": "customer_id"
+                  },
+                  {
+                    "map_column": "phone",
+                    "map_id": false,
+                    "map_provider": "customer_phone"
+                  }
+                ]
+              },
+              "properties": {},
+              "type": [
+                "null",
+                "object"
+              ]
+            },
+            "name": "customers",
+            "namespace": null,
+            "sourceDefinedCursor": true,
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
