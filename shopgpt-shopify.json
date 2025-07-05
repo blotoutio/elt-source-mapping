@@ -395,7 +395,7 @@
               ]
             ],
             "aliasName": "metafield_product_images",
-            "selected": false,
+            "selected": true,
             "suggested": false,
             "selectedFields": [],
             "hashedFields": []
@@ -529,7 +529,7 @@
               ]
             ],
             "aliasName": "metafield_shops",
-            "selected": false,
+            "selected": true,
             "suggested": false,
             "selectedFields": [],
             "hashedFields": []
@@ -660,7 +660,7 @@
               ]
             ],
             "aliasName": "product_images",
-            "selected": false,
+            "selected": true,
             "suggested": false,
             "selectedFields": [],
             "fieldSelectionEnabled": false
@@ -835,7 +835,7 @@
               ]
             ],
             "aliasName": "shop",
-            "selected": false,
+            "selected": true,
             "suggested": false,
             "selectedFields": [],
             "hashedFields": [],
