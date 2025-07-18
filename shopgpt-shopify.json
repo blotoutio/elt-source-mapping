@@ -841,6 +841,51 @@
             "hashedFields": [],
             "mappers": []
           }
+        },
+        {
+          "stream": {
+            "name": "orders",
+            "jsonSchema": {
+              "additionalProperties": true,
+              "type": [
+                "null",
+                "object"
+              ],
+              "properties": {}
+            },
+            "supportedSyncModes": [
+              "full_refresh",
+              "incremental"
+            ],
+            "sourceDefinedCursor": true,
+            "defaultCursorField": [
+              "updated_at"
+            ],
+            "sourceDefinedPrimaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "isResumable": true
+          },
+          "config": {
+            "syncMode": "incremental",
+            "cursorField": [
+              "updated_at"
+            ],
+            "destinationSyncMode": "append",
+            "primaryKey": [
+              [
+                "id"
+              ]
+            ],
+            "aliasName": "orders",
+            "selected": true,
+            "suggested": false,
+            "fieldSelectionEnabled": false,
+            "selectedFields": [],
+            "hashedFields": []
+          }
         }
       ]
     }
