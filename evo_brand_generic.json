@@ -1,0 +1,251 @@
+{
+  "brand_info": {
+    "name": "{brand_name}",
+    "category": "{brand_category}",
+    "tone": "{brand_tone}",
+    "description": "{brand_description}",
+    "target_audience": "{target_audience}",
+    "support_email": "{contact_email}"
+  },
+  "enabled_intents": [
+    "product_search",
+    "product_details",
+    "product_comparison",
+    "order_status",
+    "track_order",
+    "shipping_info",
+    "brand_question",
+    "faq",
+    "discount_promo",
+    "other",
+    "email_verification",
+    "otp_authentication",
+    "verify_otp"
+  ],
+  "intent_configurations": {
+    "product_search": {
+      "available_tools": [
+        "product_search"
+      ],
+      "max_results": 12,
+      "enable_reranking": true,
+      "enable_customer_preferences": true
+    },
+    "product_details": {
+      "available_tools": [
+        "product_details"
+      ],
+      "include_technical_specs": true
+    },
+    "order_status": {
+      "available_tools": [
+        "order_lookup",
+        "tracking_info"
+      ],
+      "require_authentication": true
+    }
+  },
+  "available_tools": [
+    "product_search",
+    "product_details",
+    "get_order_status",
+    "verify_order_by_email",
+    "get_tracking_info",
+    "generate_otp",
+    "verify_otp",
+    "get_order_status_with_otp"
+  ],
+  "otp_authentication": {
+    "enabled": true,
+    "settings": {
+      "code_expiry_minutes": 5,
+      "max_attempts": 5,
+      "session_duration_hours": 4,
+      "email_config": {
+        "use_env_prefix": true
+      },
+      "email_template": {
+        "subject": "Your {NAME} Verification Code",
+        "from_name": "{NAME} Customer Service"
+      },
+      "features": {
+        "allow_order_cancellation": false,
+        "allow_order_modification": false,
+        "require_otp_for_returns": false
+      },
+      "fallback_options": {
+        "allow_legacy_email_order_auth": true,
+        "auto_suggest_otp": true
+      },
+      "rate_limiting": {
+        "max_otp_requests_per_hour": 10,
+        "cooldown_between_requests_seconds": 30
+      }
+    }
+  },
+  "reranking_guidelines": {
+    "sample_set_handling": ""
+  },
+  "response_guidelines": {
+    "inspired_by_details": "Always mention the 'inspired by' details when describing products",
+    "review_data_consistency": "Include customer ratings and review highlights consistently"
+  },
+  "search_parameters": {
+    "allowed_filters": [],
+    "allowed_filter_types": []
+  },
+  "llm": {
+    "generate_title": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.7
+    },
+    "welcome_query": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.4
+    },
+    "intent_classifier": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "entity_extraction": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "missing_info": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "clarification": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "tool_selection": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "tool_input": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "product_search": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "product_intent": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "product_search_query": {
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "temperature": 0.1
+    },
+    "product_reranking": {
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "temperature": 0.1
+    },
+    "product_response": {
+      "provider": "openai",
+      "model_name": "gpt-4.1-mini",
+      "temperature": 0.3
+    },
+    "welcome_response": {
+      "provider": "openai",
+      "model_name": "gpt-4.1-mini",
+      "temperature": 0.3
+    },
+    "discount_promo_response": {
+      "provider": "openai",
+      "model_name": "gpt-4.1-mini",
+      "temperature": 0.3
+    },
+    "faq_intent": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "faq_search_optimization": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.3
+    },
+    "faq_response": {
+      "provider": "openai",
+      "model_name": "gpt-4.1-mini",
+      "temperature": 0.3
+    },
+    "order_status": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "general_response": {
+      "provider": "openai",
+      "model_name": "gpt-4.1-mini",
+      "temperature": 0.3
+    },
+    "follow_up_suggestions": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.7
+    },
+    "sentiment_analysis": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "resolution_assessment": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.2
+    },
+    "conversation_summary": {
+      "provider": "google",
+      "model_name": "gemini-2.0-flash",
+      "temperature": 0.1
+    },
+    "followup_detection": {
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "temperature": 0
+    }
+  },
+  "static_welcome_messages": {
+    "enabled": true,
+    "message_types": {
+      "default": [
+        "👋 Welcome! I'm your personal assistant. Whether you're searching for something specific or exploring our collection, I'm here to help you discover the perfect products. What can I help you find today?",
+        "Hi there! Ready to dive into our premium collection? 🌸 I can help you find your next favorite product, answer questions about our items, or guide you through our offerings. How can I assist you?",
+        "Welcome! ✨ I'm here to help you navigate our curated collection. Whether you know exactly what you want or need some guidance, I'm ready to help!"
+      ],
+      "returning_user": [
+        "Welcome back! 🎉 Great to see you again. Ready to discover something new or need help with a previous order? I'm here to assist with anything you need!",
+        "Hello again! 👋 Wonderful to have you back. Whether you're looking for a new product to add to your collection or have questions about your orders, I'm here to help!",
+        "Welcome back! ✨ Ready to explore more amazing products? I can help you find new items, check on orders, or answer any questions you might have."
+      ]
+    },
+    "suggestions": {
+      "default": [
+        "Show me bestsellers",
+        "Help me find something perfect",
+        "Browse by category"
+      ],
+      "returning_user": [
+        "Check my order status",
+        "Browse bestsellers",
+        "Show me recommendations"
+      ]
+    }
+  }
+}
