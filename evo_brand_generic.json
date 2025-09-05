@@ -1,12 +1,11 @@
 {
   "brand_info": {
-    "name": "{NAME}",
-    "category": "{CATEGORY}",
-    "tone": "friendly and knowledgeable",
-    "description": "{DESCRIPTION}",
-    "target_audience": "{TARGET_AUDIENCE}",
-    "support_email": "{SUPPORT_EMAIL}",
-    "env_prefix": "{ENV_PREFIX}"
+    "name": "{brand_name}",
+    "category": "{brand_category}",
+    "tone": "{brand_tone}",
+    "description": "{brand_description}",
+    "target_audience": "{target_audience}",
+    "support_email": "{contact_email}"
   },
   "enabled_intents": [
     "product_search",
