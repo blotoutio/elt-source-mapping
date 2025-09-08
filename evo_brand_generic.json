@@ -2,10 +2,11 @@
   "brand_info": {
     "name": "{brand_name}",
     "category": "{brand_category}",
-    "tone": "{brand_tone}",
+    "tone": "{tone}",
     "description": "{brand_description}",
     "target_audience": "{target_audience}",
-    "support_email": "{contact_email}"
+    "support_email": "{contact_email}",
+    "env_prefix": "generic"
   },
   "enabled_intents": [
     "product_search",
@@ -65,8 +66,8 @@
         "use_env_prefix": true
       },
       "email_template": {
-        "subject": "Your {NAME} Verification Code",
-        "from_name": "{NAME} Customer Service"
+        "subject": "Your {brand_name} Verification Code",
+        "from_name": "{brand_name} Customer Service"
       },
       "features": {
         "allow_order_cancellation": false,
@@ -83,12 +84,14 @@
       }
     }
   },
+  "search_guidelines:" :{
+    "guidelines" : "{guidelines_search}"
+  }
   "reranking_guidelines": {
-    "sample_set_handling": ""
+    "guidelines": "{re_ranking}"
   },
   "response_guidelines": {
-    "inspired_by_details": "Always mention the 'inspired by' details when describing products",
-    "review_data_consistency": "Include customer ratings and review highlights consistently"
+    "guidelines": "guidelines_responses"
   },
   "search_parameters": {
     "allowed_filters": [],
@@ -246,6 +249,19 @@
         "Browse bestsellers",
         "Show me recommendations"
       ]
+    }
+  },
+  "integrations": {
+    "customer_support": {
+      "provider": "gorgias",
+      "enabled": {gorgias_enabled},
+      "config": {
+        "api_key": "{gorgias_api_key}",
+        "domain": "{gorgias_domain}",
+        "email": "{gorgias_email}",
+        "auto_escalate_threshold": "low",
+        "customer_segment_tagging": true
+      }
     }
   }
 }
