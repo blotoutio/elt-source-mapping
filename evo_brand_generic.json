@@ -84,9 +84,9 @@
       }
     }
   },
-  "search_guidelines:" :{
-    "guidelines" : "{guidelines_search}"
-  }
+  "search_guidelines:": {
+    "guidelines": "{guidelines_search}"
+  },
   "reranking_guidelines": {
     "guidelines": "{re_ranking}"
   },
@@ -254,7 +254,7 @@
   "integrations": {
     "customer_support": {
       "provider": "gorgias",
-      "enabled": {gorgias_enabled},
+      "enabled": "{gorgias_enabled}",
       "config": {
         "api_key": "{gorgias_api_key}",
         "domain": "{gorgias_domain}",
