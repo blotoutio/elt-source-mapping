@@ -5,7 +5,7 @@
     "tone": "{tone}",
     "description": "{brand_description}",
     "target_audience": "{target_audience}",
-    "support_email": "{contact_email}",
+    "support_email": "{support_email}",
     "env_prefix": "generic"
   },
   "enabled_intents": [
