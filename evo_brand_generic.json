@@ -91,7 +91,7 @@
     "guidelines": "{re_ranking}"
   },
   "response_guidelines": {
-    "guidelines": "guidelines_responses"
+    "guidelines": "{guidelines_responses}"
   },
   "search_parameters": {
     "allowed_filters": [],
