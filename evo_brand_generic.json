@@ -92,7 +92,7 @@
   },
   "search_parameters": {
     "allowed_filters": [],
-    "allowed_filter_types": []
+    "allowed_filter_types":  ["float", "boolean", "int"]
   },
   "llm": {
     "generate_title": {
