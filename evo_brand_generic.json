@@ -63,7 +63,15 @@
       "max_attempts": 5,
       "session_duration_hours": 4,
       "email_config": {
-        "use_env_prefix": true
+        "use_env_prefix": true,
+        "smtp_host": "smtp.gmail.com",
+        "smtp_port": 587,
+        "use_tls": true,
+        "use_ssl": false,
+        "username": "EvoChatAuth@gmail.com",
+        "from_email": "EvoChatAuth@gmail.com",
+        "password_env": "GENERIC_EMAIL_PASSWORD",
+        "from_name": "{brand_name} Customer Service"
       },
       "email_template": {
         "subject": "Your {brand_name} Verification Code",
@@ -91,7 +99,7 @@
     "guidelines": "{re_ranking}"
   },
   "response_guidelines": {
-    "guidelines": "guidelines_responses"
+    "guidelines": "{guidelines_responses}"
   },
   "search_parameters": {
     "allowed_filters": [],
