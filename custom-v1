@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "source_name": "custom",
+  "created_at": "2021-07-08 00:00:00",
+  "last_updated_at": "2021-09-30 00:00:00",
+  "payload": {
+    "custom": [
+      {
+        "name": "Facebook Marketing",
+        "doc": "Facebook",
+        "path": "facebook"
+      },
+      {
+        "name": "Google Ads",
+        "doc": "GoogleDoc",
+        "path": "google"
+      },
+      {
+        "name": "Shopify",
+        "doc": "ShopifyDoc",
+        "path": "shopify-v1"
+      },
+      {
+        "name": "Facebook Pages",
+        "doc": "FacebookPageDoc",
+        "path": "facebookpage"
+      }
+    ]
+  }
+}
